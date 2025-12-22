@@ -1,10 +1,10 @@
-import React from 'react'
+
 
 const Page3_Card = ({degination,total}) => {
   return (
-    <div className='px-4 py-6 flex items-center flex-col '>
+    <div className='   flex items-center flex-col justify-center gap-2 '>
         <p className='uppercase text-sm text-[#ffffffa1] '>{degination}</p>
-        <h1 className='text-4xl text-white text-center'>{total}</h1>
+        <h1 className='text-5xl text-white'>{total}</h1>
     </div>
   )
 }
