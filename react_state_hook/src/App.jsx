@@ -1,62 +1,41 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
+// Give Grace
 const App = () => {
-  const [num, setNum] = useState(0);
-  const [intervalId, setIntervalId] = useState(null);
+  const [marks, setMarks] = useState([20, 90, 10, 40, 25]);
 
-  const handleIncrease = () => {
-    if (intervalId) clearInterval(intervalId);
-
-    const id = setInterval(() => {
-      setNum((prev) => prev + 1);
-    }, 300);
-
-    setIntervalId(id);
-  };
-  const handleDecrease = () => {
-    if (intervalId) clearInterval(intervalId);
-
-    const id = setInterval(() => {
-      setNum((prev) => prev - 1);
-    }, 300);
-
-    setIntervalId(id);
-  };
-
-  const handleStop= ()=>{
-    if(intervalId){
-      clearInterval(intervalId)
-      setInterval(null)
-    }
+  function handleBtn() {
+    let newMarks = marks.map(function (elem) {
+      if (elem >= 100) {
+        return elem;
+      } else return elem + 5;
+    });
+    setMarks(newMarks);
   }
 
   return (
-    <div className=" flex  items-center justify-center  bg-black h-screen ">
-      <div className=" flex  items-center flex-col  justify-center   h-1/2 w-1/2 bg-blue-50 rounded-2xl gap-4 text-xl">
-        Min-Track
-        <div className="px-35 py-10 bg-blue-300  rounded m-4 text-8xl text-center">
-          {num}
-        </div>
-        <div className="flex gap-4">
-          <button
-            onClick={() => handleIncrease()}
-            className="bg-green-300 text-xl px-5 py-2 rounded active:scale-[0.95] "
-          >
-            Increase
-          </button>
-          <button
-            onClick={handleDecrease}
-            className="bg-red-500 text-xl px-5 py-2 rounded active:scale-[0.95] "
-          >
-            Decrease
-          </button>
+    <div className=" mt-10 ml-50">
+      {marks.map(function (elem, idx) {
+        return (
+          <h1 key={idx} className="text-2xl">
+            Student {idx + 1} ={elem}
+            <span className="px-7"
+              style={{
+                color: elem >= 100 ? "blue" : elem >= 30 ? "green" : "red",
+              }}
+            >
+              {elem >= 30 ? "Pass" : "Fail"}
+            </span>
+          </h1>
+        );
+      })}
 
-          <button
-            onClick={handleStop}
-            className="bg-yellow-500 text-xl px-5 py-2 rounded active:scale-[0.95] "
-          >Stop</button>
-        </div>
-      </div>
+      <button
+        onClick={handleBtn}
+        className="bg-gray-500 px-4 py-3 rounded-lg mt-4 text-xl active:scale-[0.9]"
+      >
+        Give Grace
+      </button>
     </div>
   );
 };
