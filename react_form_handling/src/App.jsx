@@ -21,7 +21,7 @@ const App = () => {
         </div>
 
         {/* Right Section */}
-        <div className="w-full md:w-2/3 bg-[#555252] rounded-lg  px-10 py-2">
+        <div className="w-full md:w-2/3 bg-[#555252] rounded-lg   px-2 py-3">
           <h2 className="text-xl md:text-2xl text-white text-center uppercase mb-3">
             All Form Details
           </h2>
