@@ -73,6 +73,7 @@ const Form = ({ users, setUsers }) => {
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
           placeholder="Enter your email"
           className=" w-[80%] text-xl bg-gray-300 px-3  py-1 rounded-lg outline-none"
         />
@@ -86,6 +87,7 @@ const Form = ({ users, setUsers }) => {
           id="contact"
           value={contact}
           onChange={(e) => setContact(e.target.value)}
+          required
           className=" w-[80%] text-xl bg-gray-300 px-3  py-1 rounded-lg outline-none"
           placeholder="Enter your number"
         />
@@ -99,6 +101,7 @@ const Form = ({ users, setUsers }) => {
           id="age"
           value={age}
           onChange={(e) => setAge(e.target.value)}
+          required
           placeholder="Enter your age"
           className=" w-[80%] text-xl bg-gray-300 px-3  py-1 rounded-lg outline-none"
         />
@@ -112,6 +115,7 @@ const Form = ({ users, setUsers }) => {
               value="Male"
               checked={gender == "Male"}
               onChange={(e) => setGender(e.target.value)}
+              required
               className="scale-150"
             />
             <span className="px-2 text-xl">Male</span>
@@ -124,6 +128,7 @@ const Form = ({ users, setUsers }) => {
               value="Female"
               checked={gender == "Female"}
               onChange={(e) => setGender(e.target.value)}
+              required
               className="scale-150"
             />
             <span className="px-2 text-xl">Female</span>
@@ -135,6 +140,7 @@ const Form = ({ users, setUsers }) => {
               name="gender"
               value="Other"
               checked={gender == "Other"}
+              required
               onChange={(e) => setGender(e.target.value)}
               className="scale-150"
             />
@@ -150,6 +156,7 @@ const Form = ({ users, setUsers }) => {
           id="age"
           value={photo}
           onChange={(e) => setPhoto(e.target.value)}
+          required
           placeholder="Enter image url"
           className=" w-[80%] text-xl bg-gray-300 px-3  py-1 rounded-lg outline-none"
         />
