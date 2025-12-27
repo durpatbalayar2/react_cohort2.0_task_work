@@ -1,13 +1,11 @@
 import Card from "./Card";
 
-const FormCollect = ({users}) => {
+const FormCollect = ({ users }) => {
   return (
-    <div className="flex flex-wrap gap-4 px-2 py-2 ">
-     {users.map(function(user,idx){
-
-      return <Card key={idx} user={user} />;
-
-     })}
+    <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-2 ">
+      {users.map((user, idx) => (
+        <Card key={idx} user={user} />
+      ))}
     </div>
   );
 };
