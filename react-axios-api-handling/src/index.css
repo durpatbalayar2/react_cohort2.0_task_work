@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.635);
+  color: #fff;
+  
+ 
+
+  
+}
+
+
+
+.btn{
+  padding: 15px 30px;
+  font-size: 2rem;
+  margin-top: 30px;
+  margin-left: 40%;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  transition: all ease 0.4s;
+  width: fit-content;
+ 
+
+ 
+
+}
+.btn:active{
+  scale: 0.9;
+}
+
+
+.allUser{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user-card{
+ 
+  width: 280px;
+  height: 300px;
+  padding: 20px 30px;
+  margin: 20px;
+  font-size: 1.2rem;
+ 
+  border-radius: 10px;
+
+}
