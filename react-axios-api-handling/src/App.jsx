@@ -11,7 +11,7 @@ const App = () => {
     );
 
     setAllUsers(response.data);
-    console.log(response.data);
+    
   };
 
   return (
