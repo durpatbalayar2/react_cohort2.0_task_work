@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+
+/* PAge 404 CSS */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes tilt {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+.animate-tilt {
+  animation: tilt 6s ease-in-out infinite;
+}
+
+@keyframes fallTopLeft {
+  0% { transform: translate(0, 0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translate(-100px, 100vh); opacity: 0; }
+}
+@keyframes fallTopRight {
+  0% { transform: translate(0, 0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translate(100px, 100vh); opacity: 0; }
+}
+.animate-fall-topLeft {
+  animation: fallTopLeft 5s linear infinite;
+}
+.animate-fall-topRight {
+  animation: fallTopRight 5s linear infinite;
+}
+
+
+.bg-space {
+  background: url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9770934.jpg-Wl31ERQfbntJABIblVId5PIBjqP5Gx.jpeg") no-repeat center center/cover;
+}
+
+
+.ufo {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: float 6s ease-in-out infinite, tilt 6s ease-in-out infinite;
+}
+
+
+
+/* Swiper */
+
+
+
+.swiper {
+  width: 95%;
+  height: 85%;
+
+  margin-top: 10px;
+   position: relative;
+ 
+}
+
+.swiper-slide {
+  width: 95%;
+  height: 85%;
+  
+ 
+
+
+
+  border-radius: 20px;
+
+ 
+ 
+ 
+ 
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: #fff;
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
