@@ -1,35 +1,26 @@
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "../pages/Home";
 import About from "../pages/About";
-import Product from "../pages/Product";
-import Contact from "../pages/Contact";
-import Footer from "./components/Footer";
-import PageNotFound from "../pages/PageNotFound";
-function App() {
+import Home from "../pages/Home";
+import Products from "../pages/Products";
+import Contact from "../pages/Contact"
+import Navbar from "./components/Navbar";
+import PageNotFound from"../pages/PageNotFound";
+
+import { Routes, Route } from "react-router-dom";
+
+const App = () => {
   return (
-    <div className="w-full  bg-gray-900 text-white">
+    <div className="relative w-full h-screen">
       <Navbar />
 
-      <div className="w-full h-screen ">
-        <Routes>
-          <Route path="/" element={<Home />} />
-
-          <Route path="/about" element={<About />}>
-            <Route path="women" element={<Product />} />
-            <Route path="men" element={<Product />} />
-          </Route>
-
-          <Route path="/product" element={<Product />} />
-
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-      </div>
-
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="*"element={<PageNotFound/>}/>
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;

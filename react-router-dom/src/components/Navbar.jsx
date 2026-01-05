@@ -1,20 +1,22 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   return (
-    <div className="w-full h-20 flex gap-2 items-center justify-between bg-gray-600 px-8">
-      <div className="text-3xl font-semibold uppercase">Wearify</div>
-      <div className="flex gap-10 text-xl  ">
+    <div className="w-full flex items-center justify-between px-10   ">
+      <div className="w-35 h-35 overflow-hidden">
+        <img className="w-full h-full object-cover"  src={logo} alt="logo"  />
+      </div>
+      <div className=" flex gap-20 text-2xl font-semibold  shadow-[0px_2px_6px_rgba(0,0,0,0.4)] px-15 py-3 rounded-4xl">
         <Link to="/">Home</Link>
+        <Link to='/products'>Products</Link>
         <Link to="/about">About</Link>
-        <Link to="/product">Product</Link>
-        <Link to="/contact">Contact</Link>
-
-       
+      </div>
+      <div className="bg-black text-white font-semibold text-2xl rounded-xl px-5 py-3">
+        <Link to="/contact">Contact US</Link>
       </div>
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

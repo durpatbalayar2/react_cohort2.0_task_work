@@ -2,7 +2,7 @@
 
 const Footer = () => {
   return (
-    <div className="w-full  px-6 py-5 bg-gray-600  text-3xl text-center">
+    <div className="w-full  px-6 py-5   text-3xl text-center">
       &copy;Durpat Singh Balayar|2026
     </div>
   );
