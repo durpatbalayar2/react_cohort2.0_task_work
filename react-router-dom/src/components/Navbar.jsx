@@ -1,7 +1,8 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-full flex items-center justify-between px-10   ">
       <div className="w-35 h-35 overflow-hidden">
@@ -42,7 +43,7 @@ const Navbar = () => {
         </NavLink>
       </div>
       <div className="bg-black text-white font-semibold text-2xl rounded-4xl px-8 py-3">
-        <h1>Get Started</h1>
+        <button onClick={()=> navigate('/')}>Get Started</button>
       </div>
     </div>
   );
