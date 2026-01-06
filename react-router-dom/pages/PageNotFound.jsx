@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 function PageNotFound() {
   const [stars, setStars] = useState([]);
+  const navigate= useNavigate()
 
   const generateStars = (count) => {
     return Array.from({ length: count }, (_, i) => ({
@@ -67,9 +68,9 @@ function PageNotFound() {
         <p className="mb-8 text-xl text-gray-300">
           Oops! Looks like this page got lost in space
         </p>
-        <Link to="/" className="px-6 py-3 text-white text-3xl bg-purple-600 rounded-lg hover:bg-purple-700">
+        <button onClick={()=>navigate('/')} className="px-6 py-3 text-white text-3xl bg-purple-600 rounded-lg hover:bg-purple-700">
           Return Home
-        </Link>
+        </button>
       </div>
     </div>
   );
