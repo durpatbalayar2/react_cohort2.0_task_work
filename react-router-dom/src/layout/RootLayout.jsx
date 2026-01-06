@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 
 const RootLayout = () => {
   return (
-    <div className="relative w-full h-screen">
+    <div >
       <Navbar />
       <Outlet />
     </div>

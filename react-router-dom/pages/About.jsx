@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className="text-9xl absolute top-[50%] left-[50%] -translate-1/2">
+    <div className="text-9xl mt-50 text-center">
       About Page
     </div>
   );
