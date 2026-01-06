@@ -12,7 +12,7 @@ const Navbar = () => {
         <Link to='/products'>Products</Link>
         <Link to="/about">About</Link>
       </div>
-      <div className="bg-black text-white font-semibold text-2xl rounded-xl px-5 py-3">
+      <div className="bg-black text-white font-semibold text-2xl rounded-4xl px-8 py-3">
         <Link to="/contact">Contact US</Link>
       </div>
     </div>
